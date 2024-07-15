@@ -1,0 +1,31 @@
+/* обертка над всеми тегами */
+.page {
+  display: flex;
+  flex-direction: column;
+  /* 100 относительных единиц */
+  /* высчитываются от видимой области по высоте */
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  background-color: orange;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  /* чтобы main занимал все свободное место если контента мало */
+  flex: 1;
+}
+
+.footer {
+  width: 100%;
+  background-color: lightgrey;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
