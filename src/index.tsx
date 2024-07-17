@@ -2,9 +2,12 @@
 
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Lesson11 from './lessons/lesson11/Lesson11';
+
+
 // import Lesson09 from './lessons/lesson09/Lesson09';
 // import RandomFox from './components/randomFox/RandomFox';
-import CatFetch from './lessons/lesson10/CatFetch';
+// import CatFetch from './lessons/lesson10/CatFetch';
 // import StarWarsGallery from './components/starWarsGallery/StarWarsGallery';
 // import App from './app/App';
 // import Lesson06 from './lessons/lesson06/Lesson06';
@@ -25,7 +28,11 @@ root.render(
    {/* <StarWarsGallery/> */}
    {/* <Lesson09/> */}
    {/* <RandomFox/> */}
-   <CatFetch/>
+   {/* <CatFetch/> */}
+   <Lesson11/>
+
+  
+   
     </>
 );
 

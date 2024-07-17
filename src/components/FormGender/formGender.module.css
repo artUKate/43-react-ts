@@ -1,0 +1,11 @@
+.formGender{
+    display: flex;
+    flex-direction: column;
+}
+.formGender input{
+    margin-bottom: 3px;
+}
+.formGender> button{
+    background-color: rgb(99, 119, 222);
+    border: none;
+}
