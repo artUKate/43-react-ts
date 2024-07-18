@@ -1,11 +1,43 @@
 .formGender{
     display: flex;
+    align-items: center;
+    color: rgb(134, 4, 4);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     flex-direction: column;
+    position: relative;
+ margin-bottom: 40px
+
 }
-.formGender input{
-    margin-bottom: 3px;
-}
-.formGender> button{
-    background-color: rgb(99, 119, 222);
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+    margin: 40px;
+  }
+  
+  .inputContainer input {
+    
+    margin-right: 10px; 
+  }
+  
+  .errorMessage {
+    position: absolute;
+    left: 100%; 
+    margin-left: 10px; 
+    color: #721c24;
+    padding: 1px;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap; /*название ошибки в одну строку*/
+    
+  }
+  button{
+    background-color: #f3cfd2;
+    border-radius: 10px;
     border: none;
-}
+    transition: all 0.1s ease-in-out;
+    padding: 8px;
+    color: #721c24;
+  }
