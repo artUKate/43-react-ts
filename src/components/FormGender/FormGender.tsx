@@ -1,10 +1,20 @@
 import React, { useState } from 'react'
 import styles from './formGender.module.css'
 import { useFormik } from 'formik'
+import * as Yup from 'yup'
+
 
 interface IFormGender{
     name: string;
 }
+
+const schema = Yup.object().shape({
+  name: Yup
+  .string()
+  .typeError('Incorrect data type')
+  .required()
+  .matches(/^[a-zA-Z\s]+$/, 'Please do not use number symbols')
+})
 
 
 export default function FormGender() {
@@ -16,7 +26,8 @@ const [nameResult, setNameResult] = useState('');
     initialValues: {
         name: ''
     } as IFormGender,
-
+    validationSchema: schema,
+    validateOnChange: false,
 onSubmit: (values: IFormGender, {resetForm})=>{
    
      fetch (`https://api.genderize.io/?name=${values.name}`)
@@ -30,9 +41,10 @@ onSubmit: (values: IFormGender, {resetForm})=>{
 }
   });
 
-
+ 
 
     return (
+      <>
         <form onSubmit={formik.handleSubmit} className={styles.formGender}>
     <div>FormGender</div>
     <input value ={formik.values.name} 
@@ -48,5 +60,7 @@ onSubmit: (values: IFormGender, {resetForm})=>{
                 </div>
             }
     </form>
+    <span className={styles.errors}>{formik.errors.name}</span>
+    </>
   )
 }

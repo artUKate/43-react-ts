@@ -1,5 +1,5 @@
 import FormGender from '../../components/FormGender/FormGender'
-import LoginForm from '../../components/loginForm/LoginForm'
+import LoginForm from '../../components/robotForm/RobotForm'
 import styles from './lesson11.module.css'
 
 export default function Lesson11() {

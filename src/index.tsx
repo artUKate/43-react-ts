@@ -2,7 +2,9 @@
 
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Lesson12 from './lessons/lesson12/Lesson12';
 import Lesson11 from './lessons/lesson11/Lesson11';
+
 
 
 // import Lesson09 from './lessons/lesson09/Lesson09';
@@ -30,6 +32,7 @@ root.render(
    {/* <RandomFox/> */}
    {/* <CatFetch/> */}
    <Lesson11/>
+   {/* <Lesson12/> */}
 
   
    
