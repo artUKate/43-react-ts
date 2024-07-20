@@ -2,39 +2,39 @@
 
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Lesson12 from './lessons/lesson12/Lesson12';
 import Lesson11 from './lessons/lesson11/Lesson11';
-
-
-
-// import Lesson09 from './lessons/lesson09/Lesson09';
-// import RandomFox from './components/randomFox/RandomFox';
-// import CatFetch from './lessons/lesson10/CatFetch';
-// import StarWarsGallery from './components/starWarsGallery/StarWarsGallery';
-// import App from './app/App';
-// import Lesson06 from './lessons/lesson06/Lesson06';
-// import Lesson08 from './lessons/lesson08/lesson08';
-// import Lesson07 from './lessons/lesson07/Lesson07';
-
-
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import StarWarsGallery from './components/starWarsGallery/StarWarsGallery';
+import FormGender from './components/FormGender/FormGender';
+import RobotForm from './components/robotForm/RobotForm';
+import MyForm from './components/myForm/MyForm';
+import HomePage from './components/homePage/HomePage';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import RandomFox from './components/randomFox/RandomFox';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
  <>
-    {/* <App/> */}
-    {/* <Lesson06/> */}
-    {/* <Lesson07/> */}
-    {/* <Lesson08/> */}
-   {/* <StarWarsGallery/> */}
-   {/* <Lesson09/> */}
-   {/* <RandomFox/> */}
-   {/* <CatFetch/> */}
-   <Lesson11/>
-   {/* <Lesson12/> */}
+ <HashRouter>
+     <Routes>
+     <Route path='/'element={<Layout />} >
+     <Route path='/'element={<HomePage />} />
+     <Route path='/header' element={<Header/>}/>
+     <Route path='/random-fox' element={<RandomFox/>}/>
+     {/* <Route path='/'element={<Layout />} > */}
+    <Route path='/star-wars-gallery' element={<StarWarsGallery/>}/>
+    <Route path='/gender-form' element={<FormGender/>}/>
+    <Route path='/robot-form' element={<RobotForm/>}/>
+    <Route path='/my-form' element={<MyForm/>}/>
+    <Route path='/footer' element={<Footer/>}/>
 
-  
+      </Route>
+     </Routes>
+  </HashRouter>
    
     </>
 );

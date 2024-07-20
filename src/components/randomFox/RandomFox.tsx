@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './randomFox.module.css'
 
 interface IFoxData {
   image: string;
@@ -22,15 +23,14 @@ function RandomFox() {
   }, []);
 
   return (
-    <div>
-      <h2>Random Fox Image</h2>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Random Fox Image</h2>
       {foxImage ? (
-        <img src={foxImage} alt="Random Fox" width={300} height={200} />
+        <img className={styles.image} src={foxImage} alt="Random Fox" />
       ) : (
-        <p>Loading...</p>
+        <p className={styles.loading}>Loading...</p>
       )}
     </div>
   );
 }
-
 export default RandomFox;
