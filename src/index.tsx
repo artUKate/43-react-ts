@@ -13,6 +13,8 @@ import HomePage from './components/homePage/HomePage';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import RandomFox from './components/randomFox/RandomFox';
+import Shop from './components/shop/Shop';
+import ProductPage from './components/product/ProductPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -30,7 +32,10 @@ root.render(
     <Route path='/gender-form' element={<FormGender/>}/>
     <Route path='/robot-form' element={<RobotForm/>}/>
     <Route path='/my-form' element={<MyForm/>}/>
-    <Route path='/footer' element={<Footer/>}/>
+    <Route path='/shop' element={<Shop/>}/>
+    <Route path='/shop/:id' element={<ProductPage/>}/>
+    <Route path='*' element={<h1>Error 404</h1>} />
+    
 
       </Route>
      </Routes>
